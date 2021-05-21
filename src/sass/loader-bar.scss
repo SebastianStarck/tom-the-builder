@@ -1,0 +1,32 @@
+.loader-wrapper {
+  margin: 0 auto;
+  margin-top: 2em;
+  text-align: center;
+  max-width: 50%;
+
+  i {
+    color: rgba(145, 149, 144, 0.73);
+  }
+
+  .progress-bar {
+    width: 50%;
+    height: 1.5em;
+    margin: 0 auto;
+    margin-top: 1em;
+    box-shadow: 1px 0 5px #76767669;
+    text-align: center;
+    background-color: #000;
+
+    span {
+      position: absolute;
+      left: 49%;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .progress {
+      background-color: #ffffff69;
+      height: 100%;
+    }
+  }
+}
