@@ -1,0 +1,31 @@
+.stat-cell {
+  position: relative;
+  width: 33.3%;
+  height: 50px;
+  background-color: #827e7d;
+  border: solid 1px white;
+  text-align: center;
+
+  &:first-child {
+    z-index: 1000;
+    position: absolute;
+    background-color: #ffff00;
+    height: 150px;
+  }
+
+  img.ui.image {
+    height: 1em;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+  }
+
+  span {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    font-weight: bold;
+    font-size: 1.35em;
+    color: white;
+  }
+}

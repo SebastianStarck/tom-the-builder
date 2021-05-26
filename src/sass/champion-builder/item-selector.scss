@@ -1,0 +1,16 @@
+.add-item-wrapper {
+  .ui .menu .header {
+    background-color: red;
+    margin: 0;
+    padding: 1em;
+    height: 3.5em;
+
+    img {
+      margin-right: 0.5em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

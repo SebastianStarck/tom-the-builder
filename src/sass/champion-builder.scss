@@ -1,3 +1,6 @@
+@import "champion-builder/item-selector";
+@import "champion-builder/stats";
+
 .champion-builder-wrapper {
   height: 100%;
   min-height: 500px;
@@ -17,27 +20,6 @@
 
       .champion-stats-wrapper {
         display: contents;
-
-        .stat-cell {
-          width: 33.3%;
-          height: 50px;
-          background-color: #008000;
-          border: solid 1px white;
-          text-align: center;
-
-          &:first-child {
-            position: absolute;
-            background-color: #ffff00;
-            height: 150px;
-          }
-
-          i {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            margin-left: 5px;
-            font-size: 1.5em;
-          }
-        }
       }
     }
 
@@ -45,7 +27,8 @@
       display: flex;
       padding: 0;
 
-      .add-item-wrapper, .item-wrapper {
+      .add-item-wrapper,
+      .item-wrapper {
         width: 50%;
         text-align: center;
         padding: 1em;
