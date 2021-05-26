@@ -1,7 +1,17 @@
 import React from "react";
-import { Button, Card, Dropdown, Grid } from "semantic-ui-react";
-import { StatCell } from "./StatCell";
+import {
+  Button,
+  Card,
+  Dropdown,
+  Grid,
+  Icon,
+  Image,
+  Input,
+} from "semantic-ui-react";
 import { Props } from "../../champion-builder";
+import statLists from "../stats/stats";
+import { ItemSelector } from "../item-selector/item-selector";
+import { StatCell } from "../stats/stat-cell";
 
 function serializeItems(items) {
   if (!items) {
@@ -13,6 +23,10 @@ function serializeItems(items) {
       id,
       value: id,
       text: item.name,
+      image: {
+        avatar: true,
+        src: `http://ddragon.leagueoflegends.com/cdn/11.11.1/img/item/${id}.png`,
+      },
     };
   });
 }
@@ -27,40 +41,16 @@ export class ChampionCard extends React.Component<Props> {
           <Card.Description>
             <Grid className="champion-statistics">
               <div className="champion-stats-wrapper">
-                {Array.from({ length: 22 }).map((i) => (
-                  <StatCell />
+                {statLists.map(({ name }) => (
+                  <StatCell name={name} />
                 ))}
               </div>
             </Grid>
           </Card.Description>
         </Card.Content>
         <Card.Content extra className="items-wrapper">
-          <div className="add-item-wrapper">
-            <Dropdown
-              button
-              className="icon"
-              floating
-              labeled
-              icon="world"
-              search
-              scrolling
-              text="Add item"
-              options={itemsCollection}
-            />
-          </div>
-          <div className="add-item-wrapper">
-            <Dropdown
-              button
-              className="icon"
-              floating
-              labeled
-              icon="world"
-              search
-              scrolling
-              text="Add item"
-              options={itemsCollection}
-            />
-          </div>
+          <ItemSelector items={itemsCollection} />
+          <ItemSelector items={itemsCollection} />
         </Card.Content>
       </Card>
     );
