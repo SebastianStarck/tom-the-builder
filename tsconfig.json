@@ -4,11 +4,21 @@
     "src"
   ],
   "compilerOptions": {
+    "noLib": false,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "target": "es2018",
+    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true,
     "jsx": "react-jsx",
     "lib": [
       "dom",
       "dom.iterable",
+      "es2018",
       "esnext"
     ]
   }
